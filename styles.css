@@ -1,0 +1,19 @@
+html {
+    font-size: 1.6rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+#container {
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    box-sizing: border-box;
+}
