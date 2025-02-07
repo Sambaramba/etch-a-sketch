@@ -11,5 +11,6 @@ let gridTotal = makeGrid(gridSize);
 
 for (let i = 1; i <= gridTotal; i++) {
     const newDiv = document.createElement("div");
+    newDiv.classList.add("gridItem");
    gridContainer.appendChild(newDiv);
 }
