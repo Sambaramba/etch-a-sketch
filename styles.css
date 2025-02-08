@@ -1,19 +1,36 @@
 html {
-    font-size: 1.6rem;
+    font-size: 0.5 rem;
 }
 
 body {
-    width: 100vw;
+    /* width: 100vw;
     height: 100vh;
-    display: flex;
+    display: flex; */
+    min-height: 100vh;
+    
     justify-content: center;
     align-items: center;
     margin: 0px;
     padding: 0px;
 }
 #container {
+    display: flex;
     border: 1px solid black;
-    width: 600px;
-    height: 600px;
+    width: 402px;
+    height: 402px;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    transform: translate(50%, 50%);
+}
+
+div.gridItem {
+    /* display: block; */
+    /* border: 0.5rem solid black;
+    padding: 0.5rem; */
+    background-color: purple;
+    flex: auto;
 }
