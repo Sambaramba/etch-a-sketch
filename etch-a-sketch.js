@@ -1,16 +1,22 @@
 const gridContainer = document.querySelector("#container");
 let gridSize = 16;
 
-
 function makeGrid(boxNumber) {
-    let gridTotal = boxNumber * boxNumber
-    return gridTotal;
+
+    for (let i = 1; i <= boxNumber; i++) {
+        const rowDiv = document.createElement("div");
+        rowDiv.classList.toggle("gridRow");
+        gridContainer.appendChild(rowDiv);
+    }
+    const gridRow = document.querySelectorAll(".gridRow");
+    gridRow.forEach((row) => {
+        for (i = 1; i <= boxNumber; i++) {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.toggle("gridItem");
+            row.appendChild(itemDiv);
+        }
+    })
+
 }
 
-let gridTotal = makeGrid(gridSize);
-
-for (let i = 1; i <= gridTotal; i++) {
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("gridItem");
-   gridContainer.appendChild(newDiv);
-}
+makeGrid(gridSize);
