@@ -20,3 +20,11 @@ function makeGrid(boxNumber) {
 }
 
 makeGrid(gridSize);
+
+
+const gridItems = document.querySelectorAll(".gridItem");
+gridItems.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+        item.style.backgroundColor = "purple";
+    })
+})
