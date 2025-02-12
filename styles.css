@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* border: 1px solid black; */
   }
 
 html {
@@ -17,23 +18,36 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/*make all below flex and make grid row and grid items direction opposite/ or container and gridRow*/
+
 #container {
-    display: flex;
     border: 1px solid black;
     width: 402px;
     height: 402px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    gap: 1px;
+    padding: 5px;
+    background-color: black;
+    border-radius: 5px;
     position: relative;
     top: 25%;
     left: 25%;
     transform: translate(50%, 50%);
 }
+.gridRow {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 1px;
+    gap: 1px;
+}
 
-div.gridItem {
+.gridItem {
     /* display: block; */
     /* border: 0.5rem solid black;
     padding: 0.5rem; */
-    background-color: purple;
-    flex: auto;
+    background-color: white;
+    flex: 1;
+    /* padding: 1rem; */
 }
