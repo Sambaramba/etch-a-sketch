@@ -24,7 +24,10 @@ makeGrid(gridSize);
 
 const gridItems = document.querySelectorAll(".gridItem");
 gridItems.forEach((item) => {
-    item.addEventListener("mouseover", () => {
+    item.addEventListener("mouseenter", () => {
         item.style.backgroundColor = "purple";
+    })
+    item.addEventListener("mouseleave", () => {
+        item.style.backgroundColor = "white";
     })
 })
