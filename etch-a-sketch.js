@@ -21,11 +21,17 @@ function makeGrid(boxNumber) {
 
 makeGrid(gridSize);
 
+function getRandomNumber() {
+    return Math.floor(Math.random() * 255)
+} 
 
 const gridItems = document.querySelectorAll(".gridItem");
 gridItems.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-        item.style.backgroundColor = "purple";
+        let redValue = getRandomNumber();
+        let greenValue = getRandomNumber();
+        let blueValue = getRandomNumber();
+        item.style.backgroundColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
     })
     item.addEventListener("mouseleave", () => {
         item.style.backgroundColor = "white";
