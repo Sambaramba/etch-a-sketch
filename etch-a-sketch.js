@@ -32,7 +32,7 @@ gridItems.forEach((item) => {
         let redValue = getRandomNumber();
         let greenValue = getRandomNumber();
         let blueValue = getRandomNumber();
-        item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.2)`;
+        item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.1)`;
     })
     // item.addEventListener("mouseleave", () => {
     //     item.style.backgroundColor = "white";
