@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector("#container");
 let gridSize = 16;
 
+
 function makeGrid(boxNumber) {
 
     for (let i = 1; i <= boxNumber; i++) {
@@ -27,13 +28,30 @@ function getRandomNumber() {
 
 const gridItems = document.querySelectorAll(".gridItem");
 gridItems.forEach((item) => {
-    item.addEventListener("mouseenter", () => {
+    item.addEventListener("mouseover", () => {
         let redValue = getRandomNumber();
         let greenValue = getRandomNumber();
         let blueValue = getRandomNumber();
-        item.style.backgroundColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+        item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.2)`;
     })
-    item.addEventListener("mouseleave", () => {
-        item.style.backgroundColor = "white";
-    })
+    // item.addEventListener("mouseleave", () => {
+    //     item.style.backgroundColor = "white";
+    // })
 })
+
+/*create function,have x and y position parameters, create div
+ element, attach a class, and position styles and top and left with
+ arguments as value*/
+ /* the arguments could be button event screen or client coordinates*/
+ /*could creat class in css with all styles except top and left styles*/
+ /*could add color,width,height and radius to the class to make black dot*/
+
+// gridItems.forEach((item) => {
+//     item.addEventListener("mousedown", (e) => {
+//         e.stopPropagation()
+//         if (e.button === 0) {
+        //    item.styles.cursor: url();
+
+//         }
+//     })
+// })
