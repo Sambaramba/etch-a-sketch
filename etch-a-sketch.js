@@ -34,9 +34,20 @@ gridItems.forEach((item) => {
         let blueValue = getRandomNumber();
         item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.1)`;
     })
-    // item.addEventListener("mouseleave", () => {
-    //     item.style.backgroundColor = "white";
-    // })
+    item.addEventListener("mouseleave", () => {
+        item.style.backgroundColor = "white";
+    })
+    item.addEventListener("mousedown", function (event) {
+        // if (MouseEvent.button === 0) {}
+        let x = event.screenX;
+        let y = event.screenY;
+        let cursorDiv = document.createElement("div")
+        cursorDiv.classList.toggle("dot");
+        cursorDiv.style.left = x + "px";
+        cursorDiv.style.top = y + "px";
+        item.appendChild(cursorDiv);
+        
+    } )
 })
 
 /*create function,have x and y position parameters, create div
