@@ -37,18 +37,30 @@ gridItems.forEach((item) => {
     item.addEventListener("mouseleave", () => {
         item.style.backgroundColor = "white";
     })
-    item.addEventListener("mousedown", function (event) {
-        // if (MouseEvent.button === 0) {}
-        let x = event.screenX;
-        let y = event.screenY;
-        let cursorDiv = document.createElement("div")
-        cursorDiv.classList.toggle("dot");
-        cursorDiv.style.left = x + "px";
-        cursorDiv.style.top = y + "px";
-        item.appendChild(cursorDiv);
+    // item.addEventListener("mousedown", function (event) {
+    //     // if (MouseEvent.button === 0) {}
+    //     let x = event.screenX;
+    //     let y = event.screenY;
+    //     let cursorDiv = document.createElement("div")
+    //     cursorDiv.classList.toggle("dot");
+    //     cursorDiv.style.left = x + "px";
+    //     cursorDiv.style.top = y + "px";
+    //     item.appendChild(cursorDiv);
         
-    } )
+    // } )
 })
+
+gridContainer.addEventListener("click", function (event) {
+    // if (MouseEvent.button === 0) {}
+    let x = event.screenX;
+    let y = event.screenY;
+    let cursorDiv = document.createElement("div")
+    cursorDiv.classList.toggle("dot");
+    cursorDiv.style.left = x + -19 + "px";
+    cursorDiv.style.top = y + -218 + "px";
+    gridContainer.appendChild(cursorDiv);
+    
+} )
 
 /*create function,have x and y position parameters, create div
  element, attach a class, and position styles and top and left with
