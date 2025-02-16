@@ -12,7 +12,7 @@ html {
 body {
     /* width: 100vw*/
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     /* min-height: 100vh; */
     
     justify-content: center;
@@ -27,10 +27,10 @@ body {
     height: 402px;
     display: flex;
     border-radius: 5px;
-    /* position: relative;
-    top: 15%;
-    left: 15%;
-    transform: translate(50%, 50%); */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 .gridRow {
     display: flex;
@@ -46,8 +46,32 @@ body {
 .dot {
     background-color: black;
     /* border: 1px solid black; */
-    width: 1px;
-    height: 1px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     position: absolute;
+    /* z-index: 0; */
 }
+
+/*media queries for small screen sizes*/
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+  #container {
+    
+  }
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 302px;
+        height: 302px;
+    }
+
+}
+
+
+
