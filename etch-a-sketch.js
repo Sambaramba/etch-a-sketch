@@ -51,7 +51,7 @@ gridItems.forEach((item) => {
 })
 
 let extraCursorLeft = -508;
-let extraCursorTop = -110;
+let extraCursorTop = -110;                              
 
 
 gridContainer.addEventListener("click", function (event) {
@@ -60,8 +60,8 @@ gridContainer.addEventListener("click", function (event) {
     let y = event.clientY;
     let cursorDiv = document.createElement("div")
     cursorDiv.classList.toggle("dot");
-    cursorDiv.style.left = x + extraCursorLeft + "px";
-    cursorDiv.style.top = y + extraCursorTop + "px";
+    cursorDiv.style.left = x + "px";
+    cursorDiv.style.top = y + "px";
     gridContainer.appendChild(cursorDiv);
     
 } )
