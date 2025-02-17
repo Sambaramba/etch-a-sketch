@@ -10,10 +10,10 @@ html {
 }
 
 body {
-    /* width: 100vw*/
+    width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    /* min-height: 100vh; */
+    display: flex;
+    min-height: 100vh;
     
     justify-content: center;
     align-items: center;
@@ -22,15 +22,16 @@ body {
 /*make all below flex and make grid row and grid items direction opposite/ or container and gridRow*/
 
 #container {
-    border: 10px solid red;
+    outline: 40px solid red;
+    /* box-shadow:-20px 10px 0 red, -20px -10px red, 20px 10px red, 20px -10px red; */
     width: 402px;
     height: 402px;
     display: flex;
-    border-radius: 5px;
-    position: relative;
+    border-radius: 2px;
+    /* position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%) */
 }
 .gridRow {
     display: flex;
@@ -45,12 +46,10 @@ body {
 
 .dot {
     background-color: black;
-    /* border: 1px solid black; */
     width: 5px;
     height: 5px;
     border-radius: 50%;
     position: absolute;
-    /* z-index: 0; */
 }
 
 /*media queries for small screen sizes*/
