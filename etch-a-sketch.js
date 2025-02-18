@@ -21,6 +21,7 @@ function makeGrid(boxNumber) {
 }
 
 makeGrid(gridSize);
+// makeGrid(50);
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 255)
@@ -28,15 +29,15 @@ function getRandomNumber() {
 
 const gridItems = document.querySelectorAll(".gridItem");
 gridItems.forEach((item) => {
-    item.addEventListener("mouseover", () => {
+    item.addEventListener("mouseenter", () => {
         let redValue = getRandomNumber();
         let greenValue = getRandomNumber();
         let blueValue = getRandomNumber();
         item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.1)`;
     })
-    item.addEventListener("mouseleave", () => {
-        item.style.backgroundColor = "white";
-    })
+    // item.addEventListener("mouseleave", () => {
+    //     item.style.backgroundColor = "white";
+    // })
     // item.addEventListener("mousedown", function (event) {
     //     // if (MouseEvent.button === 0) {}
     //     let x = event.screenX;
@@ -50,21 +51,32 @@ gridItems.forEach((item) => {
     // } )
 })
 
-let extraCursorLeft = -508;
-let extraCursorTop = -110;                              
+// let extraCursorLeft = -508;
+// let extraCursorTop = -110;
+// let mouseDown = false; 
 
+// function makeDot() {};
+let interval;   
 
-gridContainer.addEventListener("click", function (event) {
-    // if (MouseEvent.button === 0) {}
-    let x = event.clientX;
-    let y = event.clientY;
-    let cursorDiv = document.createElement("div")
-    cursorDiv.classList.toggle("dot");
-    cursorDiv.style.left = x + "px";
-    cursorDiv.style.top = y + "px";
-    gridContainer.appendChild(cursorDiv);
+gridContainer.addEventListener("mousedown", function (event) {
     
-} )
+        interval = setInterval(() => {
+        let x = event.clientX;
+        let y = event.clientY;
+        let cursorDiv = document.createElement("div")
+        cursorDiv.classList.toggle("dot");
+        cursorDiv.style.left = x + "px";
+        cursorDiv.style.top = y + "px";
+        gridContainer.appendChild(cursorDiv);
+    }, 100);
+} ) 
+gridContainer.addEventListener("mouseup", () => {
+        clearInterval(interval);
+    })
+    //  if (mouseDown) {
+        
+    //  }
+
 
 /*create function,have x and y position parameters, create div
  element, attach a class, and position styles and top and left with
