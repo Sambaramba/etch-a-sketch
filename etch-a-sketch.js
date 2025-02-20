@@ -23,8 +23,11 @@ function makeGrid(boxNumber) {
 
 makeGrid(gridSize);
 
-const gridItems = document.querySelectorAll(".gridItem");
-const allGridItems = document.querySelectorAll("div.gridItem");
+
+
+
+const gridItems = document.querySelectorAll("div.gridItem");
+const gridRows = document.querySelectorAll("div.gridRow");
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 255)
@@ -46,20 +49,48 @@ function changeItemBackgroundColor (redValue, greenValue, blueValue,) {
 
 changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
 
-// function eraseGrid(items) {
-//     items.forEach((item) => item.style.backgroundColor = "white");
+
+//ERASE FUNCTION TO REMOVE ALL ITEMS BACKGROUND COLOR
+
+
+function eraseItemColor(items) {
+    items.forEach((item) => item.style.backgroundColor = "white");
     
-//     // allGridItems.forEach((item) => gridRow.removeChild(item));
+};
+
+const erase = document.querySelector("#erase");
+erase.addEventListener("click", () => eraseItemColor(gridItems));
+
+// function makeNewGrid() {
+//     while(gridContainer.firstChild) {
+//         gridContainer.removeChild(gridContainer.firstChild);
+//     }
+//     makeGrid(prompt("select grid number between 1 and 100"));
+//     changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
+// }
+
+// function eraseGridItems(rows) {
+//     // let gridRow =
+//     for (row of rows) {
+
+//     }
+//     items.forEach((item) =>  item.removeChild(gridItems));
+    
+//     // allGridItems.forEach((item) =>
 //     // const allGridRows = document.querySelectorAll("div.gridRow");
 //     // allGridRows.forEach((row) => gridContainer.removeChild(row));
     
 // };
 
-// const erase = document.querySelector("#erase");
-// erase.addEventListener("click", () => eraseGrid(allGridItems));
+// const newGrid = document.querySelector("#newGrid");
+// newGrid.addEventListener("click", () => makeNewGrid());
 
 
-/*commented out code to attempt to make pen effect*/
+
+
+/*commented outmake pen effect attempted code*/
+
+
 // let interval;   
 
 // gridContainer.addEventListener("mousedown", function (event) {
