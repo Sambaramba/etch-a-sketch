@@ -2,10 +2,11 @@ const gridContainer = document.querySelector("#container");
 let gridSize = 16;
 
 
+
 function makeGrid(boxNumber) {
 
     for (let i = 1; i <= boxNumber; i++) {
-        const rowDiv = document.createElement("div");
+        let rowDiv = document.createElement("div");
         rowDiv.classList.toggle("gridRow");
         gridContainer.appendChild(rowDiv);
     }
@@ -21,61 +22,61 @@ function makeGrid(boxNumber) {
 }
 
 makeGrid(gridSize);
-// makeGrid(50);
+
+const gridItems = document.querySelectorAll(".gridItem");
+const allGridItems = document.querySelectorAll("div.gridItem");
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 255)
 } 
-
-const gridItems = document.querySelectorAll(".gridItem");
-gridItems.forEach((item) => {
-    item.addEventListener("mouseenter", () => {
-        let redValue = getRandomNumber();
-        let greenValue = getRandomNumber();
-        let blueValue = getRandomNumber();
-        item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.1)`;
-    })
-    // item.addEventListener("mouseleave", () => {
-    //     item.style.backgroundColor = "white";
-    // })
-    // item.addEventListener("mousedown", function (event) {
-    //     // if (MouseEvent.button === 0) {}
-    //     let x = event.screenX;
-    //     let y = event.screenY;
-    //     let cursorDiv = document.createElement("div")
-    //     cursorDiv.classList.toggle("dot");
-    //     cursorDiv.style.left = x + "px";
-    //     cursorDiv.style.top = y + "px";
-    //     item.appendChild(cursorDiv);
-        
-    // } )
-})
-
-// let extraCursorLeft = -508;
-// let extraCursorTop = -110;
-// let mouseDown = false; 
-
-// function makeDot() {};
-let interval;   
-
-gridContainer.addEventListener("mousedown", function (event) {
+function changeItemBackgroundColor (redValue, greenValue, blueValue,) {
     
-        interval = setInterval(() => {
-        let x = event.clientX;
-        let y = event.clientY;
-        let cursorDiv = document.createElement("div")
-        cursorDiv.classList.toggle("dot");
-        cursorDiv.style.left = x + "px";
-        cursorDiv.style.top = y + "px";
-        gridContainer.appendChild(cursorDiv);
-    }, 100);
-} ) 
-gridContainer.addEventListener("mouseup", () => {
-        clearInterval(interval);
-    })
-    //  if (mouseDown) {
-        
-    //  }
+    gridItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+            redValue = getRandomNumber();
+            greenValue = getRandomNumber();
+            blueValue = getRandomNumber();
+            item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.1)`;
+        })
+        // item.addEventListener("mouseleave", () => {
+        //     item.style.backgroundColor = "white";
+        // })
+    });
+};
+
+changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
+
+// function eraseGrid(items) {
+//     items.forEach((item) => item.style.backgroundColor = "white");
+    
+//     // allGridItems.forEach((item) => gridRow.removeChild(item));
+//     // const allGridRows = document.querySelectorAll("div.gridRow");
+//     // allGridRows.forEach((row) => gridContainer.removeChild(row));
+    
+// };
+
+// const erase = document.querySelector("#erase");
+// erase.addEventListener("click", () => eraseGrid(allGridItems));
+
+
+/*commented out code to attempt to make pen effect*/
+// let interval;   
+
+// gridContainer.addEventListener("mousedown", function (event) {
+//         event.stopPropagation;
+//         interval = setInterval(() => {
+//         let x = event.clientX;
+//         let y = event.clientY;
+//         let cursorDiv = document.createElement("div")
+//         cursorDiv.classList.toggle("dot");
+//         cursorDiv.style.left = x + "px";
+//         cursorDiv.style.top = y + "px";
+//         gridContainer.appendChild(cursorDiv);
+//     }, 100);
+// } ) 
+// gridContainer.addEventListener("mouseup", () => {
+//         clearInterval(interval);
+// });
 
 
 /*create function,have x and y position parameters, create div
