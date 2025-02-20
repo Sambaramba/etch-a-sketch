@@ -66,24 +66,12 @@ function makeNewGrid() {
         gridContainer.removeChild(gridContainer.firstChild);
     }
     makeGrid(prompt("select grid number between 1 and 100"));
-    changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
+    // changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
 }
 
-// function eraseGridItems(rows) {
-//     // let gridRow =
-//     for (row of rows) {
 
-//     }
-//     items.forEach((item) =>  item.removeChild(gridItems));
-    
-//     // allGridItems.forEach((item) =>
-//     // const allGridRows = document.querySelectorAll("div.gridRow");
-//     // allGridRows.forEach((row) => gridContainer.removeChild(row));
-    
-// };
-
-// const newGrid = document.querySelector("#newGrid");
-// newGrid.addEventListener("click", () => makeNewGrid());
+const newGrid = document.querySelector("#newGrid");
+newGrid.addEventListener("click", () => makeNewGrid());
 
 
 
