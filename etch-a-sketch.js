@@ -61,13 +61,13 @@ function eraseItemColor(items) {
 const erase = document.querySelector("#erase");
 erase.addEventListener("click", () => eraseItemColor(gridItems));
 
-// function makeNewGrid() {
-//     while(gridContainer.firstChild) {
-//         gridContainer.removeChild(gridContainer.firstChild);
-//     }
-//     makeGrid(prompt("select grid number between 1 and 100"));
-//     changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
-// }
+function makeNewGrid() {
+    while(gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+    makeGrid(prompt("select grid number between 1 and 100"));
+    changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
+}
 
 // function eraseGridItems(rows) {
 //     // let gridRow =
