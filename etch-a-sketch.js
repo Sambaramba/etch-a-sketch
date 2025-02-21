@@ -1,44 +1,19 @@
 const gridContainer = document.querySelector("#container");
 let gridSize = 16;
 
-
-
-function makeGrid(boxNumber) {
-
-    for (let i = 1; i <= boxNumber; i++) {
-        let rowDiv = document.createElement("div");
-        rowDiv.classList.toggle("gridRow");
-        gridContainer.appendChild(rowDiv);
-    }
-    const gridRow = document.querySelectorAll(".gridRow");
-    gridRow.forEach((row) => {
-        for (i = 1; i <= boxNumber; i++) {
-            const itemDiv = document.createElement("div");
-            itemDiv.classList.toggle("gridItem");
-            row.appendChild(itemDiv);
-        }
-    })
-
+function getRandomNumber() {
+    return Math.floor(Math.random() * 255);
 }
 
-makeGrid(gridSize);
+function changeItemBackgroundColor () {
 
 
-
-
-const gridItems = document.querySelectorAll("div.gridItem");
-const gridRows = document.querySelectorAll("div.gridRow");
-
-function getRandomNumber() {
-    return Math.floor(Math.random() * 255)
-} 
-function changeItemBackgroundColor (redValue, greenValue, blueValue,) {
-    
+    const gridItems = document.querySelectorAll(".gridItem");
     gridItems.forEach((item) => {
         item.addEventListener("mouseenter", () => {
-            redValue = getRandomNumber();
-            greenValue = getRandomNumber();
-            blueValue = getRandomNumber();
+            let redValue = getRandomNumber();
+            let greenValue = getRandomNumber();
+            let blueValue = getRandomNumber();
             item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.1)`;
         })
         // item.addEventListener("mouseleave", () => {
@@ -47,7 +22,34 @@ function changeItemBackgroundColor (redValue, greenValue, blueValue,) {
     });
 };
 
-changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
+function makeGrid(boxNumber) {
+
+    for (let i = 1; i <= boxNumber; i++) {
+        let rowDiv = document.createElement("div");
+        rowDiv.classList.toggle("gridRow");
+        gridContainer.appendChild(rowDiv);
+    }
+    const gridRows = document.querySelectorAll(".gridRow");
+    gridRows.forEach((row) => {
+        for (i = 1; i <= boxNumber; i++) {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.toggle("gridItem");
+            row.appendChild(itemDiv);
+        }
+    })
+    changeItemBackgroundColor();
+}
+
+makeGrid(gridSize);
+
+
+
+
+/* TODO: go back to argument being nodelist/array with color values
+        being variables*/
+/* TODO: could add another argument for alpha value for extra credit*/
+
+
 
 
 //ERASE FUNCTION TO REMOVE ALL ITEMS BACKGROUND COLOR
@@ -61,12 +63,14 @@ function eraseItemColor(items) {
 const erase = document.querySelector("#erase");
 erase.addEventListener("click", () => eraseItemColor(gridItems));
 
+
+
 function makeNewGrid() {
     while(gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
     makeGrid(prompt("select grid number between 1 and 100"));
-    // changeItemBackgroundColor(getRandomNumber, getRandomNumber, getRandomNumber);
+    changeItemBackgroundColor();
 }
 
 
