@@ -55,13 +55,16 @@ makeGrid(gridSize);
 //ERASE FUNCTION TO REMOVE ALL ITEMS BACKGROUND COLOR
 
 
-function eraseItemColor(items) {
-    items.forEach((item) => item.style.backgroundColor = "white");
-    
+function eraseItemColor() {
+    const gridItems = document.querySelectorAll(".gridItem");
+    gridItems.forEach((item) => {
+        item.style.backgroundColor = "white";
+    });
 };
 
 const erase = document.querySelector("#erase");
-erase.addEventListener("click", () => eraseItemColor(gridItems));
+erase.addEventListener("click", eraseItemColor);
+    
 
 
 
