@@ -67,20 +67,6 @@ const erase = document.querySelector("#erase");
 erase.addEventListener("click", eraseItemColor);
     
 
-//TODO: fix func to continuously prompt until no between 1 and 100
-
-function makeNewGrid() {
-    while(gridContainer.firstChild) {
-        gridContainer.removeChild(gridContainer.firstChild);
-    }
-    
-    makeGrid(selection);
-    changeItemBackgroundColor();
-}
-
-
-const newGrid = document.querySelector("#newGrid");
-newGrid.addEventListener("click", () => makeNewGrid());
 
 function getGridNumber() {
 
@@ -90,7 +76,20 @@ function getGridNumber() {
     }
     return selection;
 }
-console.log(getGridNumber());
+
+
+function makeNewGrid() {
+    while(gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+    
+    makeGrid(getGridNumber());
+    changeItemBackgroundColor();
+}
+
+
+const newGrid = document.querySelector("#newGrid");
+newGrid.addEventListener("click", () => makeNewGrid());
 
 /*commented outmake pen effect attempted code*/
 
