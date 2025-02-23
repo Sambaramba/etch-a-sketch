@@ -1,10 +1,16 @@
 const gridContainer = document.querySelector("#container");
 let gridSize = 16;
+const newGridButton = document.querySelector("#newGrid");
+const eraseButton = document.querySelector("#erase");
+
+//CODE TO CHANGE GRID ITEMS BACKGROUND COLOR
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 255);
 }
 
+/* TODO: could add another argument for alpha value for extra credit*/
+// Then increment on mouseenter until fully opaque
 function changeItemBackgroundColor () {
 
 
@@ -22,6 +28,9 @@ function changeItemBackgroundColor () {
     });
 };
 
+
+//CODE TO MAKE A GRID
+
 function makeGrid(boxNumber) {
 
 
@@ -30,6 +39,7 @@ function makeGrid(boxNumber) {
         rowDiv.classList.toggle("gridRow");
         gridContainer.appendChild(rowDiv);
     }
+
     const gridRows = document.querySelectorAll(".gridRow");
     gridRows.forEach((row) => {
         for (i = 1; i <= boxNumber; i++) {
@@ -45,16 +55,7 @@ makeGrid(gridSize);
 
 
 
-
-/* TODO: go back to argument being nodelist/array with color values
-        being variables*/
-/* TODO: could add another argument for alpha value for extra credit*/
-
-
-
-
-//ERASE FUNCTION TO REMOVE ALL ITEMS BACKGROUND COLOR
-
+//ERASE BUTTON CODE TO REMOVE ITEMS BACKGROUND COLOR WHEN CLICKED
 
 function eraseItemColor() {
     const gridItems = document.querySelectorAll(".gridItem");
@@ -63,10 +64,11 @@ function eraseItemColor() {
     });
 };
 
-const erase = document.querySelector("#erase");
-erase.addEventListener("click", eraseItemColor);
+
+eraseButton.addEventListener("click", eraseItemColor);
     
 
+// MAKE NEW GRID BUTTON CODE
 
 function getGridNumber() {
 
@@ -87,9 +89,10 @@ function makeNewGrid() {
     changeItemBackgroundColor();
 }
 
+newGridButton.addEventListener("click", () => makeNewGrid());
 
-const newGrid = document.querySelector("#newGrid");
-newGrid.addEventListener("click", () => makeNewGrid());
+
+
 
 /*commented outmake pen effect attempted code*/
 
