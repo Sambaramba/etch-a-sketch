@@ -24,6 +24,7 @@ function changeItemBackgroundColor () {
 
 function makeGrid(boxNumber) {
 
+
     for (let i = 1; i <= boxNumber; i++) {
         let rowDiv = document.createElement("div");
         rowDiv.classList.toggle("gridRow");
@@ -66,13 +67,14 @@ const erase = document.querySelector("#erase");
 erase.addEventListener("click", eraseItemColor);
     
 
-
+//TODO: fix func to continuously prompt until no between 1 and 100
 
 function makeNewGrid() {
     while(gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
-    makeGrid(prompt("select grid number between 1 and 100"));
+    
+    makeGrid(selection);
     changeItemBackgroundColor();
 }
 
@@ -80,8 +82,15 @@ function makeNewGrid() {
 const newGrid = document.querySelector("#newGrid");
 newGrid.addEventListener("click", () => makeNewGrid());
 
+function getGridNumber() {
 
-
+    let selection = prompt("Please choose a number between 1 and 100");
+    while (isNaN(selection) || selection > 100 || selection < 1) {
+        selection = prompt ("That's an incorrect selection. Please choose a number from 1-100");
+    }
+    return selection;
+}
+console.log(getGridNumber());
 
 /*commented outmake pen effect attempted code*/
 
