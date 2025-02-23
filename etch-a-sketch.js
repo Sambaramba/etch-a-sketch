@@ -9,9 +9,14 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 255);
 }
 
+function changeAlphaValue() {
+    let alphaValue = 0;
+    return alphaValue += 0.1;
+}
+
 /* TODO: could add another argument for alpha value for extra credit*/
 // Then increment on mouseenter until fully opaque
-function changeItemBackgroundColor () {
+function changeItemBackgroundColor() {
 
 
     const gridItems = document.querySelectorAll(".gridItem");
@@ -20,7 +25,8 @@ function changeItemBackgroundColor () {
             let redValue = getRandomNumber();
             let greenValue = getRandomNumber();
             let blueValue = getRandomNumber();
-            item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, 0.1)`;
+            let alphaValue = changeAlphaValue();
+            item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, ${alphaValue})`;
         })
         // item.addEventListener("mouseleave", () => {
         //     item.style.backgroundColor = "white";
