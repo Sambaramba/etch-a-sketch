@@ -14,18 +14,23 @@ function changeAlphaValue() {
     return alphaValue += 0.1;
 }
 
-/* TODO: could add another argument for alpha value for extra credit*/
-// Then increment on mouseenter until fully opaque
+/* TODO: Add code to stop when alphavalue is 1*/
 function changeItemBackgroundColor() {
 
-
+    
     const gridItems = document.querySelectorAll(".gridItem");
     gridItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
+        item.addEventListener("mouseenter", (e) => {
+            if (!e.target.mouseEnterCount) {
+                e.target.mouseEnterCount = 1;
+            }
+
             let redValue = getRandomNumber();
             let greenValue = getRandomNumber();
             let blueValue = getRandomNumber();
-            let alphaValue = changeAlphaValue();
+            let alphaValue = 0.1 * e.target.mouseEnterCount++;
+            console.log(alphaValue);
+            //  changeAlphaValue();
             item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, ${alphaValue})`;
         })
         // item.addEventListener("mouseleave", () => {
