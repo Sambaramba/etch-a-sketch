@@ -19,6 +19,8 @@ function changeItemBackgroundColor() {
 
     
     const gridItems = document.querySelectorAll(".gridItem");
+    
+
     gridItems.forEach((item) => {
         item.addEventListener("mouseenter", (e) => {
             if (!e.target.mouseEnterCount) {
@@ -29,6 +31,10 @@ function changeItemBackgroundColor() {
             let greenValue = getRandomNumber();
             let blueValue = getRandomNumber();
             let alphaValue = 0.1 * e.target.mouseEnterCount++;
+            const maxAlphaValue = 1;
+            if (alphaValue >= maxAlphaValue) {
+                alphaValue = maxAlphaValue;
+            }
             console.log(alphaValue);
             //  changeAlphaValue();
             item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, ${alphaValue})`;
