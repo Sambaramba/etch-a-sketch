@@ -20,6 +20,11 @@ body {
     gap: 50px;
 }
 
+button {
+    padding: 2px;
+    /* width: 120px; */
+}
+
 /*make all below flex and make grid row and grid items direction opposite/ or container and gridRow*/
 
 #container {
