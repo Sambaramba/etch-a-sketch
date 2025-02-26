@@ -26,6 +26,11 @@ button {
     border-radius: 10px;
 }
 
+#buttonContainer {
+    display: flex;
+    gap: 30px;
+}
+
 /*make all below flex and make grid row and grid items direction opposite/ or container and gridRow*/
 
 #container {
