@@ -21,8 +21,9 @@ body {
 }
 
 button {
-    padding: 2px;
-    /* width: 120px; */
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 /*make all below flex and make grid row and grid items direction opposite/ or container and gridRow*/
