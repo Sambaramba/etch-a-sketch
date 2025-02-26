@@ -36,9 +36,9 @@ button {
 /*make all below flex and make grid row and grid items direction opposite/ or container and gridRow*/
 
 #container {
-    outline: 40px solid rgb(192, 25, 25);
+    outline: 5rem solid rgb(192, 25, 25);
     /* box-shadow:-20px 10px 0 red, -20px -10px red, 20px 10px red, 20px -10px red; */
-    width: 402px;
+    width: 502px;
     height: 402px;
     display: flex;
     border-radius: 2px;
@@ -80,8 +80,8 @@ button {
 
 @media (max-width: 480px) {
     #container {
-        width: 302px;
-        height: 302px;
+        width: 202px;
+        height: 202px;
     }
 
 }
