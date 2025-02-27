@@ -45,10 +45,7 @@ button {
     height: 400px;
     display: flex;
     border-radius: 2px;
-    /* position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) */
+    margin-top: 40rem;
 }
 .gridRow {
     display: flex;
@@ -91,7 +88,8 @@ button {
     #container {
         width: 450px;
         height: 400px;
-        outline-width: 40px; 
+        outline-width: 40px;
+        margin-top: 0;
     }
 }
 
@@ -105,6 +103,7 @@ button {
         width: 300px;
         height: 250px;
         outline-width: 30px;
+        margin-top: 0;
     }
 
 }
