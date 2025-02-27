@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     /* border: 1px solid black; */
     /* cursor: default; */
   }
@@ -35,7 +35,6 @@ button {
     gap: 30px;
 }
 
-/*make all below flex and make grid row and grid items direction opposite/ or container and gridRow*/
 
 #container {
     outline: 40rem solid rgb(192, 25, 25);
