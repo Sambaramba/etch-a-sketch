@@ -9,6 +9,7 @@
 html {
     font-size: 1.6px;
 }
+/*TODO: change all styles to REM so can just change html in MQ's*/
 
 body {
     width: 100vw;
@@ -18,7 +19,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 80px;
 }
 
 button {
@@ -67,6 +67,8 @@ button {
 }
 
 /*media queries for small screen sizes*/
+
+
 
 @media (max-width: 1024px) {
     button {
