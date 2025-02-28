@@ -9,10 +9,10 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 255);
 }
 
-function changeAlphaValue() {
-    let alphaValue = 0;
-    return alphaValue += 0.1;
-}
+// function changeAlphaValue() {
+//     let alphaValue = 0;
+//     return alphaValue += 0.1;
+// }
 
 /* TODO: Add code to stop when alphavalue is 1*/
 function changeItemBackgroundColor() {
@@ -103,7 +103,6 @@ function makeNewGrid() {
     }
     
     makeGrid(getGridNumber());
-    changeItemBackgroundColor();
 }
 
 newGridButton.addEventListener("click", () => makeNewGrid());
