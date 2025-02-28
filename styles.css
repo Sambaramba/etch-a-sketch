@@ -8,6 +8,7 @@
 
 html {
     font-size: 16px;
+    overflow: auto;
 }
 /*TODO: change all styles to REM so can just change html in MQ's*/
 
@@ -20,6 +21,7 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
+    overflow: auto;
 }
 
 button {
