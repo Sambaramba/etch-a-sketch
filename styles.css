@@ -41,12 +41,11 @@ button {
 
 #container {
     outline: 5em solid rgb(192, 25, 25);
-    /* box-shadow:-20px 10px 0 red, -20px -10px red, 20px 10px red, 20px -10px red; */
     width: 37.25rem;
     height: 31.25rem;
     display: flex;
     border-radius: 2px;
-    /* margin-top: 70rem; */
+    
 }
 .gridRow {
     display: flex;
@@ -73,7 +72,7 @@ button {
 
 @media (max-width: 1024px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
     /* button {
         /* font-size: 18rem; */
@@ -107,7 +106,7 @@ button {
 @media (max-width: 480px) {
 
     html {
-        font-size: 12px;
+        font-size: 8px;
     }
 
     /* button {
