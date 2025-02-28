@@ -41,8 +41,8 @@ button {
 #container {
     outline: 40rem solid rgb(192, 25, 25);
     /* box-shadow:-20px 10px 0 red, -20px -10px red, 20px 10px red, 20px -10px red; */
-    width: 500px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     display: flex;
     border-radius: 2px;
     margin-top: 40rem;
@@ -74,8 +74,8 @@ button {
     }
 
     #container {
-        width: 600px;
-        height: 500px;
+        width: 500px;
+        height: 450px;
         outline-width: 60px;
     }
 }
