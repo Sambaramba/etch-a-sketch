@@ -40,9 +40,6 @@ function changeItemBackgroundColor() {
 
             item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, ${alphaValue})`;
         })
-        // item.addEventListener("mouseleave", () => {
-        //     item.style.backgroundColor = "white";
-        // })
     });
 };
 
@@ -107,45 +104,3 @@ function makeNewGrid() {
 }
 
 newGridButton.addEventListener("click", () => makeNewGrid());
-
-
-
-
-/*commented outmake pen effect attempted code*/
-
-
-// let interval;   
-
-// gridContainer.addEventListener("mousedown", function (event) {
-//         event.stopPropagation;
-//         interval = setInterval(() => {
-//         let x = event.clientX;
-//         let y = event.clientY;
-//         let cursorDiv = document.createElement("div")
-//         cursorDiv.classList.toggle("dot");
-//         cursorDiv.style.left = x + "px";
-//         cursorDiv.style.top = y + "px";
-//         gridContainer.appendChild(cursorDiv);
-//     }, 100);
-// } ) 
-// gridContainer.addEventListener("mouseup", () => {
-//         clearInterval(interval);
-// });
-
-
-/*create function,have x and y position parameters, create div
- element, attach a class, and position styles and top and left with
- arguments as value*/
- /* the arguments could be button event screen or client coordinates*/
- /*could creat class in css with all styles except top and left styles*/
- /*could add color,width,height and radius to the class to make black dot*/
-
-// gridItems.forEach((item) => {
-//     item.addEventListener("mousedown", (e) => {
-//         e.stopPropagation()
-//         if (e.button === 0) {
-        //    item.styles.cursor: url();
-
-//         }
-//     })
-// })
