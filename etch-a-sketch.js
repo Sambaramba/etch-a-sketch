@@ -9,12 +9,20 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 255);
 }
 
-// function changeAlphaValue() {
-//     let alphaValue = 0;
-//     return alphaValue += 0.1;
-// }
+function changeAlphaValue(eventTarget) {
+    if (!eventTarget.mouseEnterCount) {
+        eventTarget.mouseEnterCount = 1;
+    }
+    let alphaValue = 0.1 * eventTarget.mouseEnterCount++;
+    const maxAlphaValue = 1;
+    if (alphaValue >= maxAlphaValue) {
+        alphaValue = maxAlphaValue;
+    }
+    console.log(alphaValue);
+    return alphaValue;
+}
 
-/* TODO: Add code to stop when alphavalue is 1*/
+
 function changeItemBackgroundColor() {
 
     
@@ -23,21 +31,13 @@ function changeItemBackgroundColor() {
 
     gridItems.forEach((item) => {
         item.addEventListener("mouseenter", (event) => {
-            if (!event.target.mouseEnterCount) {
-                event.target.mouseEnterCount = 1;
-            }
-
+            
             let redValue = getRandomNumber();
             let greenValue = getRandomNumber();
             let blueValue = getRandomNumber();
+            let alphaValue = changeAlphaValue(event.target);
 
-            let alphaValue = 0.1 * event.target.mouseEnterCount++;
-            const maxAlphaValue = 1;
-            if (alphaValue >= maxAlphaValue) {
-                alphaValue = maxAlphaValue;
-            }
-            console.log(alphaValue);
-            //  changeAlphaValue();
+
             item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, ${alphaValue})`;
         })
         // item.addEventListener("mouseleave", () => {
