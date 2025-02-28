@@ -7,7 +7,7 @@
   }
 
 html {
-    font-size: 1.6px;
+    font-size: 16px;
 }
 /*TODO: change all styles to REM so can just change html in MQ's*/
 
@@ -19,12 +19,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30rem;
+    margin-top: 4rem;
 }
 
 button {
-    padding: 4rem;
-    font-size: 20rem;
+    padding: 0.5rem;
+    font-size: 0.5rem;
     border-radius: 10px;
     background-color: rgb(192, 25, 25);
     color: rgb(237, 230, 164);
@@ -33,20 +33,20 @@ button {
 
 #buttonContainer {
     display: flex;
-    gap: 15rem;
+    gap: 1rem;
     position: absolute;
-    top: 15rem;
+    top: 1rem;
 }
 
 
 #container {
-    outline: 40rem solid rgb(192, 25, 25);
+    outline: 1em solid rgb(192, 25, 25);
     /* box-shadow:-20px 10px 0 red, -20px -10px red, 20px 10px red, 20px -10px red; */
-    width: 600px;
-    height: 500px;
+    width: 37.25rem;
+    height: 31.25rem;
     display: flex;
     border-radius: 2px;
-    margin-top: 70rem;
+    /* margin-top: 70rem; */
 }
 .gridRow {
     display: flex;
@@ -72,43 +72,54 @@ button {
 
 
 @media (max-width: 1024px) {
-    button {
-        font-size: 18rem;
+    html {
+        font-size: 12px;
     }
+    /* button {
+        /* font-size: 18rem; */
+    /* } */
 
-    #container {
-        width: 500px;
+    /* #container { */
+        /* width: 500px;
         height: 450px;
-        outline-width: 60px;
-        margin-top: 90rem;
-    }
+        outline-width: 60px; */
+        /* margin-top: 90rem; */
+    /* } */
 }
 
 @media (max-width: 768px) {
-    button {
+    html {
+        font-size: 12px;
+    }
+
+    /* button {
         font-size: 15rem;
     }
 
     #container {
         width: 400px;
         height: 350px;
-        outline-width: 40px;
-        margin-top: 50rem;
-    }
+        outline-width: 40px; 
+         margin-top: 50rem; 
+    }  */
 }
 
 @media (max-width: 480px) {
 
-    button {
-        font-size: 10rem;
+    html {
+        font-size: 12px;
+    }
+
+    /* button {
+        font-size: 10rem; 
     }
 
     #container {
         width: 300px;
         height: 250px;
         outline-width: 30px;
-        margin-top: 50rem;
-    }
+        margin-top: 50rem; 
+    } */
 
 }
 
