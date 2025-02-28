@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 20rem;
+    margin-top: 30rem;
 }
 
 button {
@@ -33,9 +33,9 @@ button {
 
 #buttonContainer {
     display: flex;
-    gap: 30;
+    gap: 15rem;
     position: absolute;
-    top: 20px;
+    top: 15rem;
 }
 
 
