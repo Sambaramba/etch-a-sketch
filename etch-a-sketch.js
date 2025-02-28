@@ -69,13 +69,13 @@ function makeGrid(boxNumber) {
 makeGrid(gridSize);
 
 
-
 //ERASE BUTTON CODE TO REMOVE ITEMS BACKGROUND COLOR WHEN CLICKED
 
+/*TODO: fix erase button as dosn't reset alpha value when clicked*/
 function eraseItemColor() {
     const gridItems = document.querySelectorAll(".gridItem");
     gridItems.forEach((item) => {
-        item.style.backgroundColor = "white";
+        item.style.backgroundColor = "rgb(255, 255, 255,0.1)";
     });
 };
 
