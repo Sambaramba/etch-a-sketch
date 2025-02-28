@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 button {
@@ -40,7 +40,7 @@ button {
 
 
 #container {
-    outline: 1em solid rgb(192, 25, 25);
+    outline: 5em solid rgb(192, 25, 25);
     /* box-shadow:-20px 10px 0 red, -20px -10px red, 20px 10px red, 20px -10px red; */
     width: 37.25rem;
     height: 31.25rem;
