@@ -20,6 +20,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 1.4rem;
+    position: relative;
 }
 
 button {
@@ -35,16 +36,18 @@ button {
     display: flex;
     gap: 3rem;
     position: absolute;
-    top: 0.5rem;
+    top: 0.1rem;
 }
 
 
 #container {
-    outline: 5em solid rgb(192, 25, 25);
+    outline: 5rem solid rgb(192, 25, 25);
     width: 37.25rem;
     height: 31.25rem;
     display: flex;
     border-radius: 2px;
+    position: absolute;
+    top: 9rem;
     
 }
 .gridRow {
