@@ -22,15 +22,16 @@ function changeItemBackgroundColor() {
     
 
     gridItems.forEach((item) => {
-        item.addEventListener("mouseenter", (e) => {
-            if (!e.target.mouseEnterCount) {
-                e.target.mouseEnterCount = 1;
+        item.addEventListener("mouseenter", (event) => {
+            if (!event.target.mouseEnterCount) {
+                event.target.mouseEnterCount = 1;
             }
 
             let redValue = getRandomNumber();
             let greenValue = getRandomNumber();
             let blueValue = getRandomNumber();
-            let alphaValue = 0.1 * e.target.mouseEnterCount++;
+
+            let alphaValue = 0.1 * event.target.mouseEnterCount++;
             const maxAlphaValue = 1;
             if (alphaValue >= maxAlphaValue) {
                 alphaValue = maxAlphaValue;
