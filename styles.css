@@ -41,13 +41,13 @@ button {
     margin-top: 0.5rem;
 }
 
-
+/*TODO: attempt to get overflow bottom to be included in overflow*/
 #container {
-    outline: 5rem solid rgb(192, 25, 25);
-    width: 37.25rem;
-    height: 31.25rem;
+    border: 5rem solid rgb(192, 25, 25);
+    width: 47.25rem;
+    height: 41.25rem;
     display: flex;
-    border-radius: 2px;
+    border-radius: 10%;
     position: absolute;
     top: 9.5rem;
     
