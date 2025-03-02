@@ -3,7 +3,7 @@ let gridSize = 16;
 const newGridButton = document.querySelector("#newGrid");
 const eraseButton = document.querySelector("#erase");
 
-//CODE TO CHANGE GRID ITEMS BACKGROUND COLOR
+//CODE TO CHANGE GRID ITEMS BACKGROUND COLOR ON MOUSEENTER
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 255);
@@ -21,7 +21,6 @@ function changeAlphaValue(eventTarget) {
     if (alphaValue >= maxAlphaValue) {
         alphaValue = maxAlphaValue;
     }
-    console.log(alphaValue);
     return alphaValue;
 }
 
@@ -39,7 +38,6 @@ function changeItemBackgroundColor() {
             let greenValue = getRandomNumber();
             let blueValue = getRandomNumber();
             let alphaValue = changeAlphaValue(event.target);
-
 
             item.style.backgroundColor = `rgba(${redValue}, ${greenValue}, ${blueValue}, ${alphaValue})`;
         })
