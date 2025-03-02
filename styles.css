@@ -2,15 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid black; */
-    /* cursor: default; */
   }
 
 html {
     font-size: 16px;
     overflow: auto;
 }
-/*TODO: change all styles to REM so can just change html in MQ's*/
 
 body {
     width: 100vw;
@@ -41,7 +38,6 @@ button {
     margin-top: 0.5rem;
 }
 
-/*TODO: attempt to get overflow bottom to be included in overflow*/
 #container {
     border: 5rem solid rgb(192, 25, 25);
     width: 47.25rem;
@@ -63,49 +59,21 @@ button {
     border: 1px solid rgba(0,0,0,0.3);
 }
 
-.dot {
-    background-color: black;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    position: absolute;
-}
 
-/*media queries for small screen sizes*/
+/*MEDIA QUERIES FOR SMALLER SCREEN SIZES*/
 
 
 
 @media (max-width: 1024px) {
     html {
         font-size: 14px;
-    }
-    /* button {
-        /* font-size: 18rem; */
-    /* } */
-
-    /* #container { */
-        /* width: 500px;
-        height: 450px;
-        outline-width: 60px; */
-        /* margin-top: 90rem; */
-    /* } */
+    } 
 }
 
 @media (max-width: 768px) {
     html {
         font-size: 10px;
     }
-
-    /* button {
-        font-size: 15rem;
-    }
-
-    #container {
-        width: 400px;
-        height: 350px;
-        outline-width: 40px; 
-         margin-top: 50rem; 
-    }  */
 }
 
 @media (max-width: 480px) {
@@ -113,18 +81,6 @@ button {
     html {
         font-size: 7px;
     }
-
-    /* button {
-        font-size: 10rem; 
-    }
-
-    #container {
-        width: 300px;
-        height: 250px;
-        outline-width: 30px;
-        margin-top: 50rem; 
-    } */
-
 }
 
 
