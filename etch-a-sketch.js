@@ -101,7 +101,6 @@ function makeNewGrid() {
     }
     gridSize = getGridNumber()
     makeGrid(gridSize);
-    return console.log(gridSize);
 }
 
 newGridButton.addEventListener("click", () => makeNewGrid());
