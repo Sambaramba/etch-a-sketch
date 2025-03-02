@@ -10,6 +10,9 @@ function getRandomNumber() {
 }
 
 function changeAlphaValue(eventTarget) {
+    if (eventTarget.style.backgroundColor === "white") {
+     delete eventTarget.mouseEnterCount;
+    }
     if (!eventTarget.mouseEnterCount) {
         eventTarget.mouseEnterCount = 1;
     }
@@ -71,11 +74,10 @@ makeGrid(gridSize);
 
 //ERASE BUTTON CODE TO REMOVE ITEMS BACKGROUND COLOR WHEN CLICKED
 
-/*TODO: fix erase button as dosn't reset alpha value when clicked*/
 function eraseItemColor() {
     const gridItems = document.querySelectorAll(".gridItem");
     gridItems.forEach((item) => {
-        item.style.backgroundColor = "rgb(255, 255, 255,0.1)";
+        item.style.backgroundColor = "white";
     });
 };
 
@@ -99,8 +101,9 @@ function makeNewGrid() {
     while(gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
-    
-    makeGrid(getGridNumber());
+    gridSize = getGridNumber()
+    makeGrid(gridSize);
+    return console.log(gridSize);
 }
 
 newGridButton.addEventListener("click", () => makeNewGrid());
